@@ -9,6 +9,8 @@ new_user=mermouy
 key_map=fr-pc
 timezone=/usr/share/zoneinfo/Europe/Paris
 gpu_mem=16
+rasp_pkgs=build-essential python-dev python-smbus python-pip git
+arch_pkgs=base-devel git python-dev python-smbus python-pip
 
 ### Load layout variables
 source bash_colors
@@ -33,6 +35,8 @@ base(){
 
 raspi(){
 	# raspi-config is mostly taking care of the needed stuff
+	sudo apt update && sudo apt-upgrade && sudo apt dist-upgrade
+	sudo apt install $rasp_pkgs || echo -e $b_red"Error\n$c_redUnable to install packages"$c_reset
 	sudo raspi-config
 }
 
@@ -58,9 +62,13 @@ arch(){
 	groupadd sudo
 	usermod -a -G sudo $new_user
 	echo 'sudo ALL=(ALL:ALL) ALL' | EDITOR='tee -a' visudo
+	# Modifying gpu-mem
 	echo -e $c_green"Modifying gpu allowed memory to $c_cyan$gpu_mem"$c_reset
 	sed '/gpu_mem/d' /boot/config.txt
 	echo "gpu_mem=$gpu_mem" >> /boot/config.txt
+
+	# Install hat libs
+	pacman -S --needed $arch_pkgs
 }
 
 # Verify root exec
