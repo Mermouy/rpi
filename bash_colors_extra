@@ -1,0 +1,39 @@
+# This script add more color options generally less used
+# Author: MerMouY
+
+# hc_* stands for High intensity text Colors
+# hb_* stands for Bold High intensity text Colors
+# hbg_* stands for Background High intensity Colors
+
+# High Intensity
+
+hc_black="\e[0;90m"
+hc_red="\e[0;91m"
+hc_green="\e[0;92m"
+hc_yellow="\e[0;93m"
+hc_blue="\e[0;94m"
+hc_purple="\e[0;95m"
+hc_cyan="\e[0;96m"
+hc_white="\e[0;97m"
+
+# Bold High Intensty
+
+hb_black="\e[1;90m"
+hb_red="\e[1;91m"
+hb_green="\e[1;92m"
+hb_yellow="\e[1;93m"
+hb_blue="\e[1;94m"
+hb_purple="\e[1;95m"
+hb_cyan="\e[1;96m"
+hb_white="\e[1;97m"
+
+# High Intensty backgrounds
+
+hbg_black="\e[0;100m"
+hbg_red="\e[0;101m"
+hbg_green="\e[0;102m"
+hbg_yellow="\e[0;103m"
+hbg_blue="\e[0;104m"
+hbg_purple="\e[0;105m"
+hbg_cyan="\e[0;106m"
+hbg_white="\e[0;107m"

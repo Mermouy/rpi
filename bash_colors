@@ -1,0 +1,62 @@
+# Simple variables usable by any script to add colors to bash scripts
+# Author: MerMouY
+
+# Usage: 
+# Just source it (source bash_colors) to use variables like:
+# echo -e $b_red"Be careful!"$c_blue "these variables are "$bg_white"beautifuls"$c_reset
+
+# These are the most basic/useful ones
+# c_* stands for colored text
+# b_* stands for bold colred text
+# u_* stand for uderlined colored text
+# bg_* stands for background colored text
+
+
+### Bash Colors ###
+# Text colors
+
+c_black="\e[0;30m"
+c_red="\e[0;31m"
+c_green="\e[0;32m"
+c_yellow="\e[0;33m"
+c_blue="\e[0;34m"
+c_purple="\e[0;35m"
+c_cyan="\e[0;36m"
+c_white="\e[0;37m"
+c_reset="\e[0m"
+
+# Bold text colors
+
+b_black="\e[1;30m"
+b_red="\e[1;31m"
+b_green="\e[1;32m"
+b_yellow="\e[1;33m"
+b_blue="\e[1;34m"
+b_purple="\e[1;35m"
+b_cyan="\e[1;36m"
+b_white="\e[1;37m"
+
+# Underline text colors
+
+u_black="\e[4;30m"
+u_red="\e[4;31m"
+u_green="\e[4;32m"
+u_yellow="\e[4;33m"
+u_blue="\e[4;34m"
+u_purple="\e[4;35m"
+u_cyan="\e[4;36m"
+u_white="\e[4;37m"
+
+# Background colors
+
+bg_black="\e[40m"
+bg_red="\e[41m"
+bg_green="\e[42m"
+bg_yellow="\e[43m"
+bg_blue="\e[44m"
+bg_purple="\e[45m"
+bg_cyan="\e[46m"
+bg_white="\e[47m"
+
+# Some layout shortcut
+line_="######################################################################"
